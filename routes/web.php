@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use App\Http\Livewire\UsersComponent;
@@ -40,3 +41,10 @@ Route::middleware([
 });
 
 
+Route::get('login/api', [HomeController::class,'index']);
+
+
+//Super Admin Routs
+// Route::group(['middleware' => 'SuperAdmins'], function () {
+//     // Route::get('',[]);
+// });
